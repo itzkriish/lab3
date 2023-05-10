@@ -31,4 +31,11 @@ public class ArrayTests {
     // also returns original array
     assertArrayEquals(new int[]{ 1 }, ArrayExamples.reversed(input1));
   }
+
+  @Test
+  public void testAverageWithoutLowest() {
+    double[] input1 = {1, 1, 5};
+    // error with duplicate lowest value
+    assertEquals(6.0/2.0, ArrayExamples.averageWithoutLowest(input1), 0.0001);
+  }
 }
